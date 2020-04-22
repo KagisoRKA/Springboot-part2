@@ -1,26 +1,31 @@
 package com.springboot.part2;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-
-@Repository
+@Service
 public class UserServiceImpl implements UserService{
-    @Autowired
-    FakeRepo fakeRepo = new FakeRepo();
-
+    //dependency injection
+    public FakeRepo fakeRepo = new FakeRepo();
     @Override
     public String addUser(long Id, String name, String surname) {
-        String insert = fakeRepo.insertUser(Id,name,surname);
-        return insert;
+        return fakeRepo.insertUser(Id, name, surname);
     }
-
+    @Override
+    @Cacheable("name")
+    public String getUser(long Id) {
+        try
+        {
+            System.out.println("Going to sleep for 5 Secs.. to simulate backend call.");
+            Thread.sleep(1000*5);
+        }
+        catch (InterruptedException e)
+        {
+            e.printStackTrace();
+        }
+        return fakeRepo.findUserById(Id);
+    }
     @Override
     public String removeUser(long Id) {
         return fakeRepo.deleteUser(Id);
-    }
-
-    @Override
-    public String getUser(long Id) {
-        return fakeRepo.findUserById(Id);
     }
 }
