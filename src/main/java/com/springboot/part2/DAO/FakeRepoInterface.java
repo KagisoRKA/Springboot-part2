@@ -1,4 +1,4 @@
-package com.springboot.part2;
+package com.springboot.part2.DAO;
 
 public interface FakeRepoInterface {
     String insertUser(long Id, String name, String surname);

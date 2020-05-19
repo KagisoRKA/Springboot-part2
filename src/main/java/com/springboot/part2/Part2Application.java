@@ -1,5 +1,6 @@
 package com.springboot.part2;
 
+import com.springboot.part2.service.UserServiceImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;

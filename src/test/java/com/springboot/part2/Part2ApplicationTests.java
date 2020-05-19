@@ -1,5 +1,6 @@
 package com.springboot.part2;
 
+import com.springboot.part2.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ class UserServiceImplTest {
 	@LocalServerPort
 	private int port;
 	@Autowired
-	UserService userService;
+    UserService userService;
 	@Autowired
 	private TestRestTemplate template;
 

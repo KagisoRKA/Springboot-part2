@@ -1,5 +1,6 @@
-package com.springboot.part2;
+package com.springboot.part2.DAO;
 
+import com.springboot.part2.model.User;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 

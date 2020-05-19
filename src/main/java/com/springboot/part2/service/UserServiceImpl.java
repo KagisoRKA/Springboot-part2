@@ -1,4 +1,5 @@
-package com.springboot.part2;
+package com.springboot.part2.service;
+import com.springboot.part2.DAO.FakeRepo;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 

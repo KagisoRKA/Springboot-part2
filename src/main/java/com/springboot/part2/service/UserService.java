@@ -1,4 +1,4 @@
-package com.springboot.part2;
+package com.springboot.part2.service;
 
 public interface UserService {
     String addUser(long Id, String name, String surname);

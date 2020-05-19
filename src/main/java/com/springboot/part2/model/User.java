@@ -1,11 +1,11 @@
-package com.springboot.part2;
+package com.springboot.part2.model;
 
 public class User {
     private long id;
     private String name;
     private String surname;
 
-    User(long Id, String Name, String Surname){
+    public User(long Id, String Name, String Surname){
         this.id = Id;
         this.name = Name;
         this.surname = Surname;
